@@ -24,11 +24,16 @@ mongoose
 app.use("/api/chat", chatRoutes);
 app.use("/api/business", businessRoutes);
 
-// Start the server
-// const PORT = process.env.PORT || 5000;
-// app.listen(PORT, () => {
-//   console.log(`Server running on port ${PORT}`);
-// });
+// Handle root route
+app.get("/", (req, res) => {
+  res.send("API is running");
+});
 
-// Export the app instead of app.listen for Vercel serverless function
-module.exports = app;
+// Start the server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
+// // Export the app instead of app.listen for Vercel serverless function
+// module.exports = app;
