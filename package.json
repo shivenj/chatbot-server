@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "build": "echo 'No build necessary for Node.js backend'",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
